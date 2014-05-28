@@ -1,3 +1,21 @@
 #header{
 	background: blue;
 }
+#game-area{
+	background: black;
+}
+.active{
+	display: block;
+}
+.hide{
+	display: none;
+}
+#espera{
+	background: gray;
+}
+#turno{
+	background: yellow;
+}
+#hisorial{
+	background: red;
+}
