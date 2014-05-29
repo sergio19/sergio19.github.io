@@ -29,7 +29,7 @@ body{
 	width: 40%;
 	font-size: 100%;
 	margin: 0 auto;
-	overflow-x: hidden;
+	/*overflow-x: hidden;*/
 }
 a{
 	text-decoration: none;
@@ -98,7 +98,6 @@ a{
 	margin: 0;
 	padding: 0 0 15em 0;
 	display: block;
-	height: 100%;
 	overflow: hidden;
 }
 #chat-conectados{
