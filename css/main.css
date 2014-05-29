@@ -23,6 +23,7 @@
 
 body, html{
 	font-family: 'action_manregular';
+	height: 100%;
 }
 body{
 	width: 40%;
@@ -37,7 +38,7 @@ a{
 #container{
 	background: #dddddd;
 	width: 100%;
-	min-height: 37em;
+	height: 100%;
 	margin: 0 auto;
 	position: relative;
 }
