@@ -12,4 +12,7 @@
 	#bienvenida .btn-bienvenida span{
 		margin: 0;
 	}
+	#footer{
+		position: fixed;
+	}
 }
