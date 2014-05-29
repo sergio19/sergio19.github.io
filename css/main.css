@@ -34,10 +34,14 @@ a{
 	outline: none;
 }
 #container{
+	background: #dddddd;
 	width: 100%;
 	min-height: 37em;
 	margin: 0 auto;
 	position: relative;
+}
+.active{
+	display: block;
 }
 #header{
 	font-family: 'action_man_shadedregular';
@@ -89,6 +93,15 @@ a{
 	background: #123;
 	z-index: -1;
 }
+#chat-conectados{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	width: 15em;
+	background: #123;
+	z-index: -1;
+}
 #panel-inicio{
 	display: none;
 	position: absolute;
@@ -99,7 +112,7 @@ a{
 	background: rgba(0,0,0,0.8);
 	z-index: 1001;
 }
-#panel-turno, #panel-espera, #panel-historial, #bienvenida{
+#panel-turno, #panel-espera, #panel-historial, #bienvenida, #game-area{
 	display: none;
 	position: absolute;
 	z-index: 99;
@@ -123,7 +136,7 @@ a{
 	background: blue;
 }
 #bienvenida .btn-bienvenida{
-	width: 25%;
+	width: 7.5em;
 	height: 6em;
 	background: rgba(75, 198, 162, .7);
 	margin: 4em 1em;
@@ -186,8 +199,6 @@ a{
 }*/
 #game-area{
 	background: #dddddd;
-	width: 100%;
-	height: 26em;
 }
 .active{
 	display: block;
