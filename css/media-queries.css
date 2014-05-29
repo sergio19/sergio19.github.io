@@ -4,9 +4,12 @@
 		height: 100%;
 	}
 	#bienvenida .btn-bienvenida{
-		width: 5em;
-		height: 3em;
-		background: rgba(75, 198, 162, .7);
-		margin: 4em 1em!important;
+		width: 90%;
+		height: 1em;
+		padding: .7em 0;
+		margin: 1em 0!important;
+	}
+	#bienvenida .btn-bienvenida span{
+		margin: 0;
 	}
 }
