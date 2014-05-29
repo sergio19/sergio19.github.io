@@ -29,7 +29,7 @@ body{
 	width: 40%;
 	font-size: 100%;
 	margin: 0 auto;
-	/*overflow-x: hidden;*/
+	position: relative;
 }
 a{
 	text-decoration: none;
@@ -99,6 +99,17 @@ a{
 	padding: 0 0 15em 0;
 	display: block;
 	overflow: hidden;
+}
+#menu-bg{
+	background: #222;
+	margin: 0;
+	position: static;
+	width: 15em;
+	top: 0;
+	bottom: 0;
+	z-index: -2;
+	display: block;
+	left: 0;
 }
 #chat-conectados{
 	position: absolute;

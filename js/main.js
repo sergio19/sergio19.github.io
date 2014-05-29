@@ -37,11 +37,13 @@ $(document).ready(function (){
 		if (!isExpandido) {
 			_duracion = 800;
 			$('#nav-menu').animate({'margin-left':'-15em'}, {duration : _duracion, queue : false});
+			$('#menu-bg').animate({'margin-left':'-15em'}, {duration : _duracion, queue : false});
 			$('#container').animate({'margin-left':'15em'}, {duration : _duracion, queue : false});
 			$('#container').animate({'margin-right':'-15em'}, {duration : _duracion, queue : false});
 		} else{
 			_duracion = 500;
 			$('#nav-menu').animate({'margin-left':'0'}, {duration : _duracion, queue : false});
+			$('#menu-bg').animate({'margin-left':'0'}, {duration : _duracion, queue : false});
 			$('#container').animate({'margin-left':'0'}, {duration : _duracion, queue : false});
 			$('#container').animate({'margin-right':'0'}, {duration : _duracion, queue : false});
 		}
@@ -68,5 +70,6 @@ $(document).ready(function (){
 		$("#container").toggleClass("active");
 		$("#nav-menu").toggleClass("active");
 		$("#chat-conectados").toggleClass("active");
+		$("#menu-bg").addClass("active");
 	});
 });
