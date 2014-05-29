@@ -146,25 +146,10 @@ a{
 	cursor: pointer;
 	box-shadow:0 6px #276653;
 	font-size: 1.1em;
-	/**/
-/*	-webkit-transition: all .5s ease-in-out;
-	-moz-transition: all .5s ease-in-out;
-	-ms-transition: all .5s ease-in-out;
-	-o-transition: all .5s ease-in-out;
-	transition: all .5s ease-in-out;*/
-	/*background: rgba(12,245,245,1);
-	background: -moz-linear-gradient(-45deg, rgba(12,245,245,1) 0%, rgba(52,247,237,1) 5%, rgba(40,130,158,1) 100%);
-	background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(12,245,245,1)), color-stop(5%, rgba(52,247,237,1)), color-stop(100%, rgba(40,130,158,1)));
-	background: -webkit-linear-gradient(-45deg, rgba(12,245,245,1) 0%, rgba(52,247,237,1) 5%, rgba(40,130,158,1) 100%);
-	background: -o-linear-gradient(-45deg, rgba(12,245,245,1) 0%, rgba(52,247,237,1) 5%, rgba(40,130,158,1) 100%);
-	background: -ms-linear-gradient(-45deg, rgba(12,245,245,1) 0%, rgba(52,247,237,1) 5%, rgba(40,130,158,1) 100%);
-	background: linear-gradient(135deg, rgba(12,245,245,1) 0%, rgba(52,247,237,1) 5%, rgba(40,130,158,1) 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0cf5f5', endColorstr='#28829e', GradientType=1 );*/
+	vertical-align: top;
 }
 #bienvenida .btn-bienvenida span{
 	margin: 30% 0;
-	display: inline-block;
-	vertical-align: middle;
 }
 #bienvenida #mihistoria{
 	margin: 0 1em;
