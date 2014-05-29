@@ -21,7 +21,7 @@ $(document).ready(function (){
 		$('#panel-historial').show('slide', {direction:'left'});
 	});
 
-	$('#menu').on('click', function (e){
+	/*$('#menu').on('click', function (e){
 		e.preventDefault();
 		if (!isVisible) {
 			$('#container').animate({marginLeft : '15em'}, 600);
@@ -31,5 +31,22 @@ $(document).ready(function (){
 			$('#nav-menu').animate({marginLeft : '0'});
 		}
 		isVisible = !isVisible;
+	});*/
+
+	var isExpandido = false,
+		_duracion;
+	$('#menu').click( function(){
+		if (!isExpandido) {
+			_duracion = 800;
+			$('#nav-menu').animate({left:'-200'}, {duration : _duracion, queue : false});
+			$('#container').animate({'margin-left':'200px'}, {duration : _duracion, queue : false});
+			$('#container').animate({'margin-right':'-200px'}, {duration : _duracion, queue : false});
+		} else{
+			_duracion = 500;
+			$('#nav-menu').animate({left:'-200'}, {duration : _duracion, queue : false});
+			$('#container').animate({'margin-left':'0'}, {duration : _duracion, queue : false});
+			$('#container').animate({'margin-right':'0'}, {duration : _duracion, queue : false});
+		}
+		isExpandido = !isExpandido;
 	});
 });
