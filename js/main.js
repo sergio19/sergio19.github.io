@@ -1,6 +1,6 @@
 $(document).ready(function (){
 
-	var cache;
+	var cache, isExpandido = false, isExpandido2 = false, _duracion;
 
 	$('#misturnos').on('click', function (){
 		cache = "up";
@@ -32,30 +32,16 @@ $(document).ready(function (){
 		$('#bienvenida').show('slide', {direction:cache}, 'slow');
 	});
 
-	/*$('#menu').on('click', function (e){
-		e.preventDefault();
-		if (!isVisible) {
-			$('#container').animate({marginLeft : '15em'}, 600);
-			$('#nav-menu').animate({marginLeft : '-15em'}, 600);
-		} else{
-			$('#container').animate({marginLeft : '0'});
-			$('#nav-menu').animate({marginLeft : '0'});
-		}
-		isVisible = !isVisible;
-	});*/
-
-	var isExpandido = false, isExpandido2 = false,
-		_duracion;
 	$('#menu').click( function (e){
 		e.preventDefault();
 		if (!isExpandido) {
 			_duracion = 800;
-			$('#nav-menu').animate({left:'-15em'}, {duration : _duracion, queue : false});
+			$('#nav-menu').animate({'margin-left':'-15em'}, {duration : _duracion, queue : false});
 			$('#container').animate({'margin-left':'15em'}, {duration : _duracion, queue : false});
 			$('#container').animate({'margin-right':'0'}, {duration : _duracion, queue : false});
 		} else{
 			_duracion = 500;
-			$('#nav-menu').animate({left:'0'}, {duration : _duracion, queue : false});
+			$('#nav-menu').animate({'margin-left':'0'}, {duration : _duracion, queue : false});
 			$('#container').animate({'margin-left':'0'}, {duration : _duracion, queue : false});
 			$('#container').animate({'margin-right':'0'}, {duration : _duracion, queue : false});
 		}
@@ -79,8 +65,8 @@ $(document).ready(function (){
 	});
 
 	$("#menu").click(function(){
-			$("#container").toggleClass("active");
-			$("#nav-menu").toggleClass("active");
-			$("#chat-conectados").toggleClass("active");
-		});
+		$("#container").toggleClass("active");
+		$("#nav-menu").toggleClass("active");
+		$("#chat-conectados").toggleClass("active");
+	});
 });
