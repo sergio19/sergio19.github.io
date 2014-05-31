@@ -65,7 +65,7 @@ a{
 	text-align: center;
 	color: #ccc;
 	text-shadow: 1px 1px 1px #222;
-	margin: .5em 0;
+	margin: .3em 0;
 	padding: 0;
 }
 #header button{
@@ -79,7 +79,12 @@ a{
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
 	background-position: 0 0;
-	background-origin: 0 0;
+	outline: none;	
+}
+#header button:active{	
+	top: 20px!important;
+	content: '';
+	position: relative;
 }
 #header #menu{
 	background-image: url(../img/menu.png);
