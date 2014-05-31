@@ -7,8 +7,8 @@ $(document).ready(function (){
 	function iniciar(){
 		$('#bienvenida').find('.btn-bienvenida').each(function (i, item){
 			setTimeout(function(el) {
-	            $(item).show('slide', {direction:'left'}, 1000);
-	        }, i * 1200, $(this));
+	            $(item).show('slide', {direction:'left'}, 500);
+	        }, i * 500, $(this));
 
 			console.log(i + '' +item);
 		});
