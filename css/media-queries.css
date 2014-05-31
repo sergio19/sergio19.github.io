@@ -5,8 +5,7 @@
 	}
 	#bienvenida .btn-bienvenida{
 		width: 90%;
-		height: 1em;
-		padding: .7em 0;
+		height: 2em;
 		margin: 1em 0!important;
 	}
 	#bienvenida .btn-bienvenida span{
