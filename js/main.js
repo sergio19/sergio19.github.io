@@ -1,6 +1,6 @@
 $(document).ready(function (){
 
-	var cache, isExpandido = false, isExpandido2 = false, _duracion, lastPos = 0;;
+	var cache, isMenuVisible = false, isChatVisible = false, _duracion, lastPos = 0;;
 
 	iniciar();
 
@@ -44,25 +44,25 @@ $(document).ready(function (){
 
 	$('#menu').click( function (e){
 		e.preventDefault();
-		if (isExpandido2 == false) {
-			if (!isExpandido) {
-				mostarMenu();
+		if (!isChatVisible) {
+			if (!isMenuVisible) {
+				mostrarMenu();
 			} else{
 				ocultarMenu();		
 			}
-			isExpandido = !isExpandido;
+			isMenuVisible = !isMenuVisible;
 		}
 	});
 
 	$('#chat').click( function (e){
 		e.preventDefault();
-		if (isExpandido == false) {
-			if (!isExpandido2) {
+		if (!isMenuVisible) {
+			if (!isChatVisible) {
 				mostrarChat();		
 			} else{
 				ocultarChat();
 			}
-			isExpandido2 = !isExpandido2;
+			isChatVisible = !isChatVisible;
 		}
 	});
 
@@ -71,44 +71,44 @@ $(document).ready(function (){
 	 
   	// Callback function references the event target and adds the 'swipeleft' class to it
 	function swipeleftHandler( event ){
-		if (isExpandido) {
-    		ocultarMenu();
-    		isExpandido = !isExpandido;
-    	} else if (!isExpandido2) {
+		if (!isChatVisible && !isMenuVisible) {
     		mostrarChat();
-    		isExpandido2 = !isExpandido2;
+    		isChatVisible = true;
+    	} else if (isMenuVisible) {
+    		ocultarMenu();
+    		isMenuVisible = false;
     	}
 	}
 
 	function swipeRigthHandler( event ){
-		if (!isExpandido) {
-    		mostrarMenu();
-    		isExpandido = !isExpandido;
-    	} else if (isExpandido2) {
-    		ocultarChat();
-    		isExpandido2 = !isExpandido2;
-    	}
+		if (!isMenuVisible && !isChatVisible) {
+			mostrarMenu();
+			isMenuVisible = !isMenuVisible;
+		} else if (isChatVisible) {
+			ocultarChat();
+			isChatVisible = !isChatVisible;
+		}
 	}
 	
 	$(window).scroll(function() {
 		var currPos = $(document).scrollLeft();
 
 		if (lastPos < currPos) {
-	    	if (isExpandido) {
+	    	if (isMenuVisible) {
 	    		ocultarMenu();
-	    		isExpandido = !isExpandido;
-	    	} else if (isExpandido2) {
+	    		isMenuVisible = !isMenuVisible;
+	    	} else if (isChatVisible) {
 	    		ocultarChat();
-	    		isExpandido2 = !isExpandido2;
+	    		isChatVisible = !isChatVisible;
 	    	}
 		} 
 		if (lastPos > currPos) {
-	    	if (!isExpandido) {
+	    	if (!isMenuVisible) {
 	    		mostrarMenu();
-	    		isExpandido = !isExpandido;
-	    	} else if (!isExpandido2) {
+	    		isMenuVisible = !isMenuVisible;
+	    	} else if (!isChatVisible) {
 	    		mostrarChat();
-	    		isExpandido2 = !isExpandido2;
+	    		isChatVisible = !isChatVisible;
 	    	}	
 		}
 
