@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @font-face {
     font-family: 'action_manregular';
     src: url('fonts/action_man-webfont.eot');
@@ -231,3 +232,227 @@ a{
 #footer p{
 	margin: .7em 0 0 0;
 }
+=======
+@font-face {
+    font-family: 'action_manregular';
+    src: url('fonts/action_man-webfont.eot');
+    src: url('fonts/action_man-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/action_man-webfont.woff') format('woff'),
+         url('fonts/action_man-webfont.ttf') format('truetype'),
+         url('fonts/action_man-webfont.svg#action_manregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'action_man_shadedregular';
+    src: url('fonts/action_man_shaded-webfont.eot');
+    src: url('fonts/action_man_shaded-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/action_man_shaded-webfont.woff') format('woff'),
+         url('fonts/action_man_shaded-webfont.ttf') format('truetype'),
+         url('fonts/action_man_shaded-webfont.svg#action_man_shadedregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+body, html{
+	font-family: 'action_manregular';
+	height: 100%;
+}
+body{
+	width: 40%;
+	font-size: 100%;
+	margin: 0 auto;
+	overflow-x: hidden;
+}
+a{
+	text-decoration: none;
+	outline: none;
+}
+#container{
+	background: #dddddd;
+	width: 100%;
+	height: 100%;
+	margin: 0 auto;
+	position: relative;
+}
+.active{
+	display: block;
+}
+#header{
+	font-family: 'action_man_shadedregular';
+	display: inline-block;
+	background: #434343;
+	width: 100%;
+	height: 4em;
+	/**/
+	background: rgba(85,85,85,1);
+	background: -moz-linear-gradient(top, rgba(85,85,85,1) 0%, rgba(68,68,68,1) 8%, rgba(68,68,68,1) 93%, rgba(85,85,85,1) 100%);
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(85,85,85,1)), color-stop(8%, rgba(68,68,68,1)), color-stop(93%, rgba(68,68,68,1)), color-stop(100%, rgba(85,85,85,1)));
+	background: -webkit-linear-gradient(top, rgba(85,85,85,1) 0%, rgba(68,68,68,1) 8%, rgba(68,68,68,1) 93%, rgba(85,85,85,1) 100%);
+	background: -o-linear-gradient(top, rgba(85,85,85,1) 0%, rgba(68,68,68,1) 8%, rgba(68,68,68,1) 93%, rgba(85,85,85,1) 100%);
+	background: -ms-linear-gradient(top, rgba(85,85,85,1) 0%, rgba(68,68,68,1) 8%, rgba(68,68,68,1) 93%, rgba(85,85,85,1) 100%);
+	background: linear-gradient(to bottom, rgba(85,85,85,1) 0%, rgba(68,68,68,1) 8%, rgba(68,68,68,1) 93%, rgba(85,85,85,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#555555', endColorstr='#555555', GradientType=0 );
+}
+#header h1{
+	text-align: center;
+	color: #ccc;
+	text-shadow: 1px 1px 1px #222;
+	margin: .5em 0;
+	padding: 0;
+}
+#header a{
+	text-align: center;
+	color: #ccc;
+	text-shadow: 1px 1px 1px #222;
+	margin: .5em 0;
+	padding: 0;
+	font-size: 1em;
+}
+#header #menu{
+	position: absolute;
+	top: 1em;
+	left: 1em;
+}
+#header #chat{
+	position: absolute;
+	top: 1em;
+	right: 1em;
+}
+#nav-menu{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	width: 15em;
+	background: #123;
+	z-index: -1;
+
+	margin: 0;
+	padding: 0 0 15em 0;
+	display: block;
+	overflow: hidden;
+}
+#chat-conectados{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	width: 15em;
+	background: #123;
+	z-index: -1;
+}
+#panel-inicio{
+	display: none;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	top: 0;
+	left: 0;
+	background: rgba(0,0,0,0.8);
+	z-index: 1001;
+}
+#panel-turno, #panel-espera, #panel-historial, #bienvenida, #game-area{
+	display: none;
+	position: absolute;
+	z-index: 99;
+	top: 4em;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	text-align: center;
+}
+#bienvenida{
+	display: block;
+	background: #000;
+}
+#panel-turno{
+	background: cyan;
+}
+#panel-espera{
+	background: orange;
+}
+#panel-historial{
+	background: blue;
+}
+#bienvenida .btn-bienvenida{
+	width: 7.5em;
+	height: 6em;
+	background: rgba(75, 198, 162, .7);
+	margin: 4em 1em;
+	display: inline-block;
+	border-radius: .25em;
+	cursor: pointer;
+	box-shadow:0 6px #276653;
+	font-size: 1.1em;
+	vertical-align: top;
+}
+#bienvenida .btn-bienvenida span{
+	margin: 30% 0;
+}
+#bienvenida #mihistoria{
+	margin: 0 1em;
+}
+#bienvenida .btn-bienvenida:active{	
+	top: 6px;
+	box-shadow: 0 1px #276653;
+	content: '';
+	position: relative;
+}
+#bienvenida .btn-bienvenida:focus, 
+#bienvenida .btn-bienvenida:hover{
+	/*background: rgba(12,245,245,1);
+	background: -moz-linear-gradient(45deg, rgba(12,245,245,1) 0%, rgba(52,247,237,1) 5%, rgba(40,130,158,1) 100%);
+	background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(12,245,245,1)), color-stop(5%, rgba(52,247,237,1)), color-stop(100%, rgba(40,130,158,1)));
+	background: -webkit-linear-gradient(45deg, rgba(12,245,245,1) 0%, rgba(52,247,237,1) 5%, rgba(40,130,158,1) 100%);
+	background: -o-linear-gradient(45deg, rgba(12,245,245,1) 0%, rgba(52,247,237,1) 5%, rgba(40,130,158,1) 100%);
+	background: -ms-linear-gradient(45deg, rgba(12,245,245,1) 0%, rgba(52,247,237,1) 5%, rgba(40,130,158,1) 100%);
+	background: linear-gradient(45deg, rgba(12,245,245,1) 0%, rgba(52,247,237,1) 5%, rgba(40,130,158,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0cf5f5', endColorstr='#28829e', GradientType=1 );*/
+}
+/*#bienvenida #misturnos{
+	background: purple;
+	left: 1em;
+}
+#bienvenida #esperando{
+	background: pink;
+	right: 1em;
+}
+
+#bienvenida p{
+	cursor: pointer;
+}*/
+#game-area{
+	background: #dddddd;
+}
+.active{
+	display: block;
+}
+.hide{
+	display: none;
+}
+#espera{
+	background: gray;
+}
+#turno{
+	background: yellow;
+}
+#hisorial{
+	background: red;
+}
+#footer{
+	position: absolute;
+	z-index: 1000;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	height: 2.5em;
+	background: #444;
+	text-align: center;
+}
+#footer p{
+	margin: .7em 0 0 0;
+}
+>>>>>>> e88387b318ca1016fdb7d264f25bbad810cc0182
