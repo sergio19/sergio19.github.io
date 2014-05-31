@@ -89,31 +89,6 @@ $(document).ready(function (){
 			}
 		}
 	});
-	
-	$(window).scroll(function() {
-		var currPos = $(document).scrollLeft();
-
-		if (lastPos < currPos) {
-	    	if (isMenuVisible) {
-	    		ocultarMenu();
-	    		isMenuVisible = !isMenuVisible;
-	    	} else if (isChatVisible) {
-	    		ocultarChat();
-	    		isChatVisible = !isChatVisible;
-	    	}
-		} 
-		if (lastPos > currPos) {
-	    	if (!isMenuVisible) {
-	    		mostrarMenu();
-	    		isMenuVisible = !isMenuVisible;
-	    	} else if (!isChatVisible) {
-	    		mostrarChat();
-	    		isChatVisible = !isChatVisible;
-	    	}	
-		}
-
-		lastPos = currPos;
-	});
 
 	function mostrarMenu(){
 		_duracion = 800;
