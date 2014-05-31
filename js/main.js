@@ -66,29 +66,29 @@ $(document).ready(function (){
 		}
 	});
 
-	$( "#container" ).on( "swipeleft", swipeleftHandler );
-	$( "#container" ).on( "swiperight", swipeRigthHandler );
-	 
-  	// Callback function references the event target and adds the 'swipeleft' class to it
-	function swipeleftHandler( event ){
-		if (!isChatVisible && !isMenuVisible) {
-    		mostrarChat();
-    		isChatVisible = true;
-    	} else if (isMenuVisible) {
-    		ocultarMenu();
-    		isMenuVisible = false;
-    	}
-	}
+/*	$( "#container" ).on( "swipeleft", swipeleftHandler );
+	$( "#container" ).on( "swiperight", swipeRigthHandler );*/
 
-	function swipeRigthHandler( event ){
-		if (!isMenuVisible && !isChatVisible) {
-			mostrarMenu();
-			isMenuVisible = !isMenuVisible;
-		} else if (isChatVisible) {
-			ocultarChat();
-			isChatVisible = !isChatVisible;
+	$('body').on({
+		swipeleft : function (e){
+			if (!isChatVisible && !isMenuVisible) {
+	    		mostrarChat();
+	    		isChatVisible = true;
+	    	} else if (isMenuVisible) {
+	    		ocultarMenu();
+	    		isMenuVisible = false;
+	    	}
+		},
+		swiperight : function (e){
+			if (!isMenuVisible && !isChatVisible) {
+				mostrarMenu();
+				isMenuVisible = !isMenuVisible;
+			} else if (isChatVisible) {
+				ocultarChat();
+				isChatVisible = !isChatVisible;
+			}
 		}
-	}
+	});
 	
 	$(window).scroll(function() {
 		var currPos = $(document).scrollLeft();
