@@ -1,6 +1,6 @@
 $(document).ready(function (){
 
-	var cache, isExpandido = false, isExpandido2 = false, _duracion;
+	var cache, isExpandido = false, isExpandido2 = false, _duracion, lastPos = 0;;
 
 	iniciar();
 
@@ -66,7 +66,29 @@ $(document).ready(function (){
 		}
 	});
 
-	var lastPos = 0;
+	$( "#container" ).on( "swipeleft", swipeleftHandler );
+	$( "#container" ).on( "swipeRigth", swipeRigthHandler );
+	 
+  	// Callback function references the event target and adds the 'swipeleft' class to it
+	function swipeleftHandler( event ){
+		if (isExpandido) {
+    		ocultarMenu();
+    		isExpandido = !isExpandido;
+    	} else if (!isExpandido2) {
+    		mostrarChat();
+    		isExpandido2 = !isExpandido2;
+    	}
+	}
+
+	function swipeRigthHandler( event ){
+		if (!isExpandido) {
+    		mostrarMenu();
+    		isExpandido = !isExpandido;
+    	} else if (isExpandido2) {
+    		ocultarChat();
+    		isExpandido2 = !isExpandido2;
+    	}
+	}
 	
 	$(window).scroll(function() {
 		var currPos = $(document).scrollLeft();
