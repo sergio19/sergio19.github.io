@@ -67,7 +67,7 @@ $(document).ready(function (){
 	});
 
 	$( "#container" ).on( "swipeleft", swipeleftHandler );
-	$( "#container" ).on( "swipeRigth", swipeRigthHandler );
+	$( "#container" ).on( "swiperight", swipeRigthHandler );
 	 
   	// Callback function references the event target and adds the 'swipeleft' class to it
 	function swipeleftHandler( event ){
@@ -104,10 +104,10 @@ $(document).ready(function (){
 		} 
 		if (lastPos > currPos) {
 	    	if (!isExpandido) {
-	    		mostraMenu();
+	    		mostrarMenu();
 	    		isExpandido = !isExpandido;
 	    	} else if (!isExpandido2) {
-	    		mostarChat();
+	    		mostrarChat();
 	    		isExpandido2 = !isExpandido2;
 	    	}	
 		}
@@ -115,7 +115,7 @@ $(document).ready(function (){
 		lastPos = currPos;
 	});
 
-	function mostarMenu(){
+	function mostrarMenu(){
 		_duracion = 800;
 		$('#nav-menu').animate({'margin-left':'-15em'}, {duration : _duracion, queue : false});
 		$('#menu-bg').animate({'margin-left':'-15em'}, {duration : _duracion, queue : false});
