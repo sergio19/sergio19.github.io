@@ -9,8 +9,6 @@ $(document).ready(function (){
 			setTimeout(function(el) {
 	            $(item).show('slide', {direction:'left'}, 500);
 	        }, i * 500, $(this));
-
-			console.log(i + '' +item);
 		});
 	}
 
@@ -48,20 +46,11 @@ $(document).ready(function (){
 		e.preventDefault();
 		if (isExpandido2 == false) {
 			if (!isExpandido) {
-				_duracion = 800;
-				$('#nav-menu').animate({'margin-left':'-15em'}, {duration : _duracion, queue : false});
-				$('#menu-bg').animate({'margin-left':'-15em'}, {duration : _duracion, queue : false});
-				$('#container').animate({'margin-left':'15em'}, {duration : _duracion, queue : false});
-				$('#container').animate({'margin-right':'-15em'}, {duration : _duracion, queue : false});
+				mostarMenu();
 			} else{
-				_duracion = 500;
-				$('#nav-menu').animate({'margin-left':'0'}, {duration : _duracion, queue : false});
-				$('#menu-bg').animate({'margin-left':'0'}, {duration : _duracion, queue : false});
-				$('#container').animate({'margin-left':'0'}, {duration : _duracion, queue : false});
-				$('#container').animate({'margin-right':'0'}, {duration : _duracion, queue : false});
+				ocultarMenu();		
 			}
 			isExpandido = !isExpandido;
-			console.log(isExpandido + " " + isExpandido2);
 		}
 	});
 
@@ -69,20 +58,70 @@ $(document).ready(function (){
 		e.preventDefault();
 		if (isExpandido == false) {
 			if (!isExpandido2) {
-				_duracion = 800;
-				$('#chat-conectados').animate({'margin-right':'-15em'}, {duration : _duracion, queue : false});
-				$('#container').animate({'margin-left':'-15em'}, {duration : _duracion, queue : false});
-				$('#container').animate({'margin-right':'15em'}, {duration : _duracion, queue : false});
+				mostrarChat();		
 			} else{
-				_duracion = 500;
-				$('#chat-conectados').animate({'margin-right':'0'}, {duration : _duracion, queue : false});
-				$('#container').animate({'margin-right':'0'}, {duration : _duracion, queue : false});
-				$('#container').animate({'margin-left':'0'}, {duration : _duracion, queue : false});
+				ocultarChat();
 			}
 			isExpandido2 = !isExpandido2;
-			console.log(isExpandido + " " + isExpandido2);
 		}
 	});
+
+	var lastPos = 0;
+	
+	$(window).scroll(function() {
+		var currPos = $(document).scrollLeft();
+
+		if (lastPos < currPos) {
+	    	if (isExpandido) {
+	    		ocultarMenu();
+	    		isExpandido = !isExpandido;
+	    	} else if (isExpandido2) {
+	    		ocultarChat();
+	    		isExpandido2 = !isExpandido2;
+	    	}
+		} 
+		if (lastPos > currPos) {
+	    	if (!isExpandido) {
+	    		mostraMenu();
+	    		isExpandido = !isExpandido;
+	    	} else if (!isExpandido2) {
+	    		mostarChat();
+	    		isExpandido2 = !isExpandido2;
+	    	}	
+		}
+
+		lastPos = currPos;
+	});
+
+	function mostarMenu(){
+		_duracion = 800;
+		$('#nav-menu').animate({'margin-left':'-15em'}, {duration : _duracion, queue : false});
+		$('#menu-bg').animate({'margin-left':'-15em'}, {duration : _duracion, queue : false});
+		$('#container').animate({'margin-left':'15em'}, {duration : _duracion, queue : false});
+		$('#container').animate({'margin-right':'-15em'}, {duration : _duracion, queue : false});
+	}
+
+	function ocultarMenu(){
+		_duracion = 500;
+		$('#nav-menu').animate({'margin-left':'0'}, {duration : _duracion, queue : false});
+		$('#menu-bg').animate({'margin-left':'0'}, {duration : _duracion, queue : false});
+		$('#container').animate({'margin-left':'0'}, {duration : _duracion, queue : false});
+		$('#container').animate({'margin-right':'0'}, {duration : _duracion, queue : false});	
+	}
+
+	function mostrarChat(){
+		_duracion = 800;
+		$('#chat-conectados').animate({'margin-right':'-15em'}, {duration : _duracion, queue : false});
+		$('#container').animate({'margin-left':'-15em'}, {duration : _duracion, queue : false});
+		$('#container').animate({'margin-right':'15em'}, {duration : _duracion, queue : false});
+	}
+
+	function ocultarChat(){
+		_duracion = 500;
+		$('#chat-conectados').animate({'margin-right':'0'}, {duration : _duracion, queue : false});
+		$('#container').animate({'margin-right':'0'}, {duration : _duracion, queue : false});
+		$('#container').animate({'margin-left':'0'}, {duration : _duracion, queue : false});
+	}
 
 	$("#menu").click(function(){
 		$("#container").toggleClass("active");

@@ -29,7 +29,7 @@ body{
 	width: 40%;
 	font-size: 100%;
 	margin: 0 auto;
-	overflow-x: hidden;
+	/*overflow-x: hidden;*/
 }
 a{
 	text-decoration: none;
