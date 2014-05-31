@@ -68,6 +68,18 @@ a{
 	margin: .3em 0;
 	padding: 0;
 }
+
+#header h1::first-letter{
+  color: blue;
+}
+#header h1::first-letter(1) {
+  color: red;
+}
+#header h1::nth-letter(n+2) {
+  color: white;
+}
+
+
 #header button{
 	text-align: center;
 	margin: 0;
