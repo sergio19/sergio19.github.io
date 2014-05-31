@@ -155,9 +155,7 @@ a{
 	vertical-align: top;
 	border: none;
 	outline: none;
-}
-#bienvenida .btn-bienvenida span{
-	margin: 30% 0;
+	display: none;
 }
 #bienvenida #mihistoria{
 	margin: 0 1em;
@@ -201,6 +199,15 @@ a{
 	margin: .7em 0 0 0;
 }
 /**/
-@keyframes animacion{
-	0%{left: 0px}
+@keyframes mymove
+{
+	from {top:0px;}
+	to {top:200px;}
 }
+
+@-webkit-keyframes mymove /* Safari and Chrome */
+{
+	from {top:0px;}
+	to {top:200px;}
+}
+

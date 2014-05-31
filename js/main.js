@@ -2,6 +2,18 @@ $(document).ready(function (){
 
 	var cache, isExpandido = false, isExpandido2 = false, _duracion;
 
+	iniciar();
+
+	function iniciar(){
+		$('#bienvenida').find('.btn-bienvenida').each(function (i, item){
+			setTimeout(function(el) {
+	            $(item).show('slide', {direction:'left'}, 1000);
+	        }, i * 1200, $(this));
+
+			console.log(i + '' +item);
+		});
+	}
+
 	$('#misturnos').on('click', function (){
 		cache = "left";
 		$(this).parent().hide('slide', {direction:'left'}, 'slow').find('.panel').hide();
