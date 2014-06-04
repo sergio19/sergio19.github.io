@@ -66,7 +66,7 @@ $(document).ready(function (){
 		}
 	});
 
-	$('body html wrapper').on({
+	$('body').on({
 		swipeleft : function (e){
 			if (!isChatVisible && !isMenuVisible) {
 	    		mostrarChat();
@@ -124,3 +124,16 @@ $(document).ready(function (){
 		$("#menu-bg").addClass("active");
 	});
 });
+
+function logear(){
+    FB.getLoginStatus(function(response) {
+      if (response.status === 'connected') {
+        console.log('Logged in.');
+      }
+      else {
+        FB.login();
+      }
+    });
+}
+
+

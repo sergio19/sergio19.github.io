@@ -13,6 +13,24 @@
 	<link rel="stylesheet" type="text/css" href="css/media-queries.css">
 </head>
 <body>
+	<script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId      : '1485666288317471',
+          xfbml      : true,
+          version    : 'v2.0'
+        });
+      };
+
+      (function(d, s, id){
+         var js, fjs = d.getElementsByTagName(s)[0];
+         if (d.getElementById(id)) {return;}
+         js = d.createElement(s); js.id = id;
+         js.src = "//connect.facebook.net/en_US/sdk.js";
+         fjs.parentNode.insertBefore(js, fjs);
+       }(document, 'script', 'facebook-jssdk'));
+    </script>
+	
 	<div id="wrapper">
 	    <div id="container">
             <!--Encabezado Principal-->
@@ -36,10 +54,10 @@
                 <a href="#" class="regresar">Regresar</a>
             </div>
             <div id="bienvenida">
-                <button type="button" id="misturnos" class="btn-bienvenida">Me Toca</button type="button">
-                <button type="button" id="nueva" class="btn-bienvenida">Iniciar la vara</button type="button">
-                <button type="button" id="esperando" class="btn-bienvenida">En un toque</button type="button">
-                <button type="button" id="mihistoria" class="btn-bienvenida">Mis jugadas</button type="button">
+                <button type="button" id="misturnos" class="btn-bienvenida">Me Toca</button>
+                <button type="button" id="nueva" class="btn-bienvenida">Iniciar la vara</button>
+                <button type="button" id="esperando" class="btn-bienvenida">En un toque</button>
+                <button type="button" id="mihistoria" class="btn-bienvenida">Mis jugadas</button>
             </div>
             <div id="panel-turno" class="panel">
                 <a href="#" class="regresar">Regresar</a>
@@ -55,6 +73,9 @@
             </div>
             <div id="panel-inicio">
 
+            </div>
+            <div id="sesion">
+                <button type="button" id="loginjs" onclick="logear();">Login FB Javascript</button>
             </div>
         </div>
 	</div>
