@@ -1,9 +1,9 @@
 $(document).ready(function (){
 
-	var cache, isMenuVisible = false, isChatVisible = false, _duracion, lastPos = 0;;
+	var cache, isMenuVisible = false, isChatVisible = false, _duracion, lastPos = 0;
 
-	iniciar();
-
+    iniciar();
+    
 	function iniciar(){
 		$('#bienvenida').find('.btn-bienvenida').each(function (i, item){
 			setTimeout(function(el) {
@@ -66,10 +66,7 @@ $(document).ready(function (){
 		}
 	});
 
-/*	$( "#container" ).on( "swipeleft", swipeleftHandler );
-	$( "#container" ).on( "swiperight", swipeRigthHandler );*/
-
-	$('body').on({
+	$('body html wrapper').on({
 		swipeleft : function (e){
 			if (!isChatVisible && !isMenuVisible) {
 	    		mostrarChat();
