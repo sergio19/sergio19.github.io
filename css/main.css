@@ -26,7 +26,6 @@ body, html{
 	height: 100%;
 }
 body{
-	width: 40%;
 	font-size: 100%;
 	margin: 0 auto;
 	/*overflow-x: hidden;*/
@@ -34,6 +33,7 @@ body{
 a{
 	text-decoration: none;
 	outline: none;
+    color: #345679;
 }
 #container{
 	background: #dddddd;
@@ -48,38 +48,29 @@ a{
 #header{
 	font-family: 'action_man_shadedregular';
 	display: inline-block;
-	background: #434343;
+	background: #2D4DBF;
 	width: 100%;
 	height: 4em;
-	/**/
-	background: rgba(85,85,85,1);
-	background: -moz-linear-gradient(top, rgba(85,85,85,1) 0%, rgba(68,68,68,1) 8%, rgba(68,68,68,1) 93%, rgba(85,85,85,1) 100%);
-	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(85,85,85,1)), color-stop(8%, rgba(68,68,68,1)), color-stop(93%, rgba(68,68,68,1)), color-stop(100%, rgba(85,85,85,1)));
-	background: -webkit-linear-gradient(top, rgba(85,85,85,1) 0%, rgba(68,68,68,1) 8%, rgba(68,68,68,1) 93%, rgba(85,85,85,1) 100%);
-	background: -o-linear-gradient(top, rgba(85,85,85,1) 0%, rgba(68,68,68,1) 8%, rgba(68,68,68,1) 93%, rgba(85,85,85,1) 100%);
-	background: -ms-linear-gradient(top, rgba(85,85,85,1) 0%, rgba(68,68,68,1) 8%, rgba(68,68,68,1) 93%, rgba(85,85,85,1) 100%);
-	background: linear-gradient(to bottom, rgba(85,85,85,1) 0%, rgba(68,68,68,1) 8%, rgba(68,68,68,1) 93%, rgba(85,85,85,1) 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#555555', endColorstr='#555555', GradientType=0 );
+    background-image: -webkit-gradient(
+        linear,
+        left bottom,
+        right top,
+        color-stop(0, #3399BB),
+        color-stop(0.59, #308CAD)
+    );
+    background-image: -o-linear-gradient(right top, #3399BB 0%, #308CAD 59%);
+    background-image: -moz-linear-gradient(right top, #3399BB 0%, #308CAD 59%);
+    background-image: -webkit-linear-gradient(right top, #3399BB 0%, #308CAD 59%);
+    background-image: -ms-linear-gradient(right top, #3399BB 0%, #308CAD 59%);
+    background-image: linear-gradient(to right top, #3399BB 0%, #308CAD 59%);
 }
 #header h1{
 	text-align: center;
-	color: #ccc;
-	text-shadow: 1px 1px 1px #222;
+	color: #000;
+	text-shadow: 1px 1px 1px #eee;
 	margin: .3em 0;
 	padding: 0;
 }
-
-#header h1::first-letter{
-  color: blue;
-}
-#header h1::first-letter(1) {
-  color: red;
-}
-#header h1::nth-letter(n+2) {
-  color: white;
-}
-
-
 #header button{
 	text-align: center;
 	margin: 0;
@@ -91,9 +82,9 @@ a{
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
 	background-position: 0 0;
-	outline: none;	
+	outline: none;
 }
-#header button:active{	
+#header button:active{
 	top: 20px!important;
 	content: '';
 	position: relative;
@@ -155,7 +146,20 @@ a{
 }
 #bienvenida{
 	display: block;
-	background: #000;
+	background-image: -webkit-gradient(
+	linear,
+        left bottom,
+        right top,
+        color-stop(0, #112233),
+        color-stop(0.53, #444444),
+        color-stop(0.95, #112233),
+        color-stop(1, #444444)
+    );
+    background-image: -o-linear-gradient(right top, #112233 0%, #444444 53%, #112233 95%, #444444 100%);
+    background-image: -moz-linear-gradient(right top, #112233 0%, #444444 53%, #112233 95%, #444444 100%);
+    background-image: -webkit-linear-gradient(right top, #112233 0%, #444444 53%, #112233 95%, #444444 100%);
+    background-image: -ms-linear-gradient(right top, #112233 0%, #444444 53%, #112233 95%, #444444 100%);
+    background-image: linear-gradient(to right top, #112233 0%, #444444 53%, #112233 95%, #444444 100%);
 }
 #panel-turno{
 	background: cyan;
@@ -174,17 +178,19 @@ a{
 	display: inline-block;
 	border-radius: .25em;
 	cursor: pointer;
-	box-shadow:0 6px #276653;
+	/*box-shadow:0 6px #276653;*/
 	font-size: 1.1em;
 	vertical-align: top;
 	border: none;
 	outline: none;
 	display: none;
+    
+    box-shadow: inset 0px 1px 0px #276653, 0px 6px 0px 0px #276653, 0px 10px 5px #444;
 }
 #bienvenida #mihistoria{
 	margin: 0 1em;
 }
-#bienvenida .btn-bienvenida:active{	
+#bienvenida .btn-bienvenida:active{
 	top: 6px;
 	box-shadow: 0 1px #276653;
 	content: '';
@@ -234,4 +240,9 @@ a{
 	from {top:0px;}
 	to {top:200px;}
 }
-
+#wrapper {
+    width: 600px;
+    height: 100%;
+    margin: 0 auto;
+    overflow: auto;
+}
